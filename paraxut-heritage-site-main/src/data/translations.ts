@@ -1,0 +1,487 @@
+/**
+ * TRADUÇÕES
+ * ------------------------------------------------------------
+ * Textos escritos manualmente em PT / EN / ES / FR.
+ * Para alterar qualquer texto do site, edita apenas este ficheiro.
+ */
+
+export const dictionaries = {
+  pt: {
+    "nav.home": "Início",
+    "nav.about": "Sobre",
+    "nav.menu": "Menu",
+    "nav.gallery": "Galeria",
+    "nav.reviews": "Avaliações",
+    "nav.reservations": "Reservas",
+    "nav.location": "Localização",
+    "nav.contact": "Contactos",
+    "nav.openMenu": "Abrir menu de navegação",
+    "nav.closeMenu": "Fechar menu de navegação",
+
+    "cta.whatsapp": "Reservar pelo WhatsApp",
+    "cta.viewMenu": "Ver Menu",
+    "cta.maps": "Abrir no Google Maps",
+    "cta.email": "Email",
+    "cta.call": "Telefonar",
+
+    "hero.since": "Desde 1992",
+    "hero.house": "Casa portuguesa",
+    "hero.tagline": "Sabores tradicionais portugueses no coração de Guimarães",
+    "hero.imageAlt": "Mesa posta com pratos tradicionais portugueses",
+
+    "tourist.title": "Cozinha tradicional portuguesa em Guimarães",
+    "tourist.text":
+      "No centro histórico de Guimarães, a poucos passos da Praça de São Tiago, servimos cozinha portuguesa desde 1992.",
+    "tourist.location": "Centro histórico",
+    "tourist.hours": "Almoço e jantar, todos os dias",
+    "tourist.cuisine": "Cozinha portuguesa",
+    "tourist.booking": "Reserva por WhatsApp",
+
+    "about.eyebrow": "A nossa história",
+    "about.title": "Uma casa portuguesa desde 1992",
+    "about.p1":
+      "O nome Paraxut nasce da história do proprietário: antes de dedicar a vida à cozinha, foi paraquedista. Desse percurso ficou o rigor, a disciplina e o gosto por fazer bem feito.",
+    "about.p2":
+      "Desde 1992 que a casa é gerida por um casal. É uma cozinha de família, feita todos os dias com o mesmo cuidado.",
+    "about.p3":
+      "Os nossos valores são simples e não mudaram: qualidade e tradição, à mesa e no acolhimento.",
+    "about.value1.title": "Qualidade",
+    "about.value1.text": "Cozinha cuidada, feita no momento.",
+    "about.value2.title": "Tradição",
+    "about.value2.text": "Receitas portuguesas de sempre.",
+    "about.value3.title": "Família",
+    "about.value3.text": "Uma casa gerida por um casal.",
+
+    "menu.eyebrow": "A nossa carta",
+    "menu.title": "Menu",
+    "menu.subtitle":
+      "A nossa carta está disponível em português, inglês, espanhol e francês. Peça o prato do dia à mesa.",
+    "menu.priceSoon": "Preço na carta",
+    "menu.note": "A carta pode sofrer alterações consoante o mercado e a época do ano.",
+
+    "gallery.eyebrow": "Galeria",
+    "gallery.title": "O restaurante",
+    "gallery.subtitle": "Imagens ilustrativas — as fotografias reais do restaurante serão adicionadas em breve.",
+    "gallery.interior": "Sala do restaurante",
+    "gallery.dish": "Prato de cozinha portuguesa",
+    "gallery.square": "Centro histórico de Guimarães",
+    "gallery.facade": "Ambiente do restaurante",
+    "gallery.prev": "Imagem anterior",
+    "gallery.next": "Imagem seguinte",
+    "gallery.close": "Fechar imagem",
+
+    "reviews.eyebrow": "Avaliações",
+    "reviews.title": "O que dizem os nossos clientes",
+    "reviews.placeholder":
+      "Espaço reservado para uma avaliação real de cliente. Substituir por um testemunho verdadeiro.",
+    "reviews.placeholderAuthor": "Avaliação por preencher",
+    "reviews.note": "Testemunhos partilhados pelos nossos clientes.",
+
+    "reservation.eyebrow": "Reservas",
+    "reservation.title": "Pedido de reserva",
+    "reservation.subtitle":
+      "Aceitamos reservas consoante o período. Preencha os dados e enviaremos o pedido por WhatsApp.",
+    "reservation.name": "Nome",
+    "reservation.people": "Número de pessoas",
+    "reservation.date": "Data",
+    "reservation.time": "Hora",
+    "reservation.message": "Mensagem (opcional)",
+    "reservation.messagePlaceholder": "Alergias, cadeira de bebé, ocasião especial...",
+    "reservation.submit": "Enviar pedido por WhatsApp",
+    "reservation.disclaimer":
+      "A reserva só fica confirmada depois de o restaurante responder e confirmar pelo WhatsApp.",
+    "reservation.required": "Por favor preencha nome, data e hora.",
+    "reservation.waIntro": "Olá, gostaria de fazer uma reserva no Restaurante Paraxut.",
+    "reservation.waName": "Nome",
+    "reservation.waPeople": "Pessoas",
+    "reservation.waDate": "Data",
+    "reservation.waTime": "Hora",
+    "reservation.waMessage": "Mensagem",
+
+    "location.eyebrow": "Localização",
+    "location.title": "Onde estamos",
+    "location.historic": "No centro histórico de Guimarães, na Praça de São Tiago.",
+    "location.mapTitle": "Mapa com a localização do Restaurante Paraxut",
+
+    "contact.eyebrow": "Contactos",
+    "contact.title": "Fale connosco",
+    "contact.phone": "Telefone",
+    "contact.whatsapp": "WhatsApp",
+    "contact.email": "Email",
+    "contact.facebook": "Facebook",
+    "contact.facebookSoon": "Página em breve",
+    "contact.hours": "Horário",
+    "contact.everyday": "Todos os dias",
+    "contact.lunch": "Almoço",
+    "contact.dinner": "Jantar",
+
+    "footer.rights": "Todos os direitos reservados.",
+    "footer.links": "Navegação",
+    "footer.languages": "Idiomas",
+
+    "theme.toggle": "Alternar modo claro/escuro",
+    "lang.label": "Idioma",
+    "seo.title": "Restaurante Paraxut | Restaurante Português em Guimarães",
+    "seo.description":
+      "Restaurante Paraxut, desde 1992 no centro histórico de Guimarães. Cozinha tradicional portuguesa na Praça de São Tiago. Reservas por WhatsApp.",
+  },
+
+  en: {
+    "nav.home": "Home",
+    "nav.about": "About",
+    "nav.menu": "Menu",
+    "nav.gallery": "Gallery",
+    "nav.reviews": "Reviews",
+    "nav.reservations": "Reservations",
+    "nav.location": "Location",
+    "nav.contact": "Contact",
+    "nav.openMenu": "Open navigation menu",
+    "nav.closeMenu": "Close navigation menu",
+
+    "cta.whatsapp": "Book on WhatsApp",
+    "cta.viewMenu": "View Menu",
+    "cta.maps": "Open in Google Maps",
+    "cta.email": "Email",
+    "cta.call": "Call us",
+
+    "hero.since": "Since 1992",
+    "hero.house": "Portuguese house",
+    "hero.tagline": "Traditional Portuguese flavours in the heart of Guimarães",
+    "hero.imageAlt": "Table set with traditional Portuguese dishes",
+
+    "tourist.title": "Traditional Portuguese cuisine in Guimarães",
+    "tourist.text":
+      "In the historic centre of Guimarães, steps away from Praça de São Tiago, we have been serving Portuguese food since 1992.",
+    "tourist.location": "Historic centre",
+    "tourist.hours": "Lunch and dinner, every day",
+    "tourist.cuisine": "Portuguese cuisine",
+    "tourist.booking": "Booking via WhatsApp",
+
+    "about.eyebrow": "Our story",
+    "about.title": "A Portuguese house since 1992",
+    "about.p1":
+      "The name Paraxut comes from the owner's own story: before dedicating his life to the restaurant, he was a paratrooper. From that path came the rigour, the discipline and the taste for doing things properly.",
+    "about.p2":
+      "Since 1992 the house has been run by a couple. It is a family kitchen, made every day with the same care.",
+    "about.p3":
+      "Our values are simple and have not changed: quality and tradition, on the table and in the welcome.",
+    "about.value1.title": "Quality",
+    "about.value1.text": "Careful cooking, made to order.",
+    "about.value2.title": "Tradition",
+    "about.value2.text": "Timeless Portuguese recipes.",
+    "about.value3.title": "Family",
+    "about.value3.text": "A house run by a couple.",
+
+    "menu.eyebrow": "Our carte",
+    "menu.title": "Menu",
+    "menu.subtitle":
+      "Our menu is available in Portuguese, English, Spanish and French. Ask for the dish of the day at your table.",
+    "menu.priceSoon": "Price on the menu",
+    "menu.note": "The menu may change according to the market and the season.",
+
+    "gallery.eyebrow": "Gallery",
+    "gallery.title": "The restaurant",
+    "gallery.subtitle": "Illustrative images — real photographs of the restaurant will be added soon.",
+    "gallery.interior": "Restaurant dining room",
+    "gallery.dish": "Portuguese dish",
+    "gallery.square": "Historic centre of Guimarães",
+    "gallery.facade": "Restaurant atmosphere",
+    "gallery.prev": "Previous image",
+    "gallery.next": "Next image",
+    "gallery.close": "Close image",
+
+    "reviews.eyebrow": "Reviews",
+    "reviews.title": "What our guests say",
+    "reviews.placeholder": "Placeholder for a real guest review. To be replaced with a genuine testimonial.",
+    "reviews.placeholderAuthor": "Review to be added",
+    "reviews.note": "Testimonials shared by our guests.",
+
+    "reservation.eyebrow": "Reservations",
+    "reservation.title": "Reservation request",
+    "reservation.subtitle":
+      "We accept reservations depending on the period. Fill in your details and we will send the request via WhatsApp.",
+    "reservation.name": "Name",
+    "reservation.people": "Number of people",
+    "reservation.date": "Date",
+    "reservation.time": "Time",
+    "reservation.message": "Message (optional)",
+    "reservation.messagePlaceholder": "Allergies, high chair, special occasion...",
+    "reservation.submit": "Send request on WhatsApp",
+    "reservation.disclaimer":
+      "The reservation is only confirmed after the restaurant replies and confirms it on WhatsApp.",
+    "reservation.required": "Please fill in name, date and time.",
+    "reservation.waIntro": "Hello, I would like to make a reservation at Restaurante Paraxut.",
+    "reservation.waName": "Name",
+    "reservation.waPeople": "People",
+    "reservation.waDate": "Date",
+    "reservation.waTime": "Time",
+    "reservation.waMessage": "Message",
+
+    "location.eyebrow": "Location",
+    "location.title": "Where to find us",
+    "location.historic": "In the historic centre of Guimarães, on Praça de São Tiago.",
+    "location.mapTitle": "Map showing the location of Restaurante Paraxut",
+
+    "contact.eyebrow": "Contact",
+    "contact.title": "Get in touch",
+    "contact.phone": "Phone",
+    "contact.whatsapp": "WhatsApp",
+    "contact.email": "Email",
+    "contact.facebook": "Facebook",
+    "contact.facebookSoon": "Page coming soon",
+    "contact.hours": "Opening hours",
+    "contact.everyday": "Every day",
+    "contact.lunch": "Lunch",
+    "contact.dinner": "Dinner",
+
+    "footer.rights": "All rights reserved.",
+    "footer.links": "Navigation",
+    "footer.languages": "Languages",
+
+    "theme.toggle": "Toggle light/dark mode",
+    "lang.label": "Language",
+    "seo.title": "Restaurante Paraxut | Portuguese Restaurant in Guimarães",
+    "seo.description":
+      "Restaurante Paraxut, since 1992 in the historic centre of Guimarães. Traditional Portuguese cuisine on Praça de São Tiago. Bookings via WhatsApp.",
+  },
+
+  es: {
+    "nav.home": "Inicio",
+    "nav.about": "Sobre",
+    "nav.menu": "Menú",
+    "nav.gallery": "Galería",
+    "nav.reviews": "Opiniones",
+    "nav.reservations": "Reservas",
+    "nav.location": "Ubicación",
+    "nav.contact": "Contacto",
+    "nav.openMenu": "Abrir menú de navegación",
+    "nav.closeMenu": "Cerrar menú de navegación",
+
+    "cta.whatsapp": "Reservar por WhatsApp",
+    "cta.viewMenu": "Ver Menú",
+    "cta.maps": "Abrir en Google Maps",
+    "cta.email": "Email",
+    "cta.call": "Llamar",
+
+    "hero.since": "Desde 1992",
+    "hero.house": "Casa portuguesa",
+    "hero.tagline": "Sabores tradicionales portugueses en el corazón de Guimarães",
+    "hero.imageAlt": "Mesa servida con platos tradicionales portugueses",
+
+    "tourist.title": "Cocina tradicional portuguesa en Guimarães",
+    "tourist.text":
+      "En el centro histórico de Guimarães, a pocos pasos de la Praça de São Tiago, servimos cocina portuguesa desde 1992.",
+    "tourist.location": "Centro histórico",
+    "tourist.hours": "Comida y cena, todos los días",
+    "tourist.cuisine": "Cocina portuguesa",
+    "tourist.booking": "Reserva por WhatsApp",
+
+    "about.eyebrow": "Nuestra historia",
+    "about.title": "Una casa portuguesa desde 1992",
+    "about.p1":
+      "El nombre Paraxut nace de la historia del propietario: antes de dedicar su vida al restaurante, fue paracaidista. De ese camino quedaron el rigor, la disciplina y el gusto por hacer las cosas bien.",
+    "about.p2":
+      "Desde 1992 la casa está gestionada por un matrimonio. Es una cocina de familia, hecha cada día con el mismo cuidado.",
+    "about.p3":
+      "Nuestros valores son sencillos y no han cambiado: calidad y tradición, en la mesa y en la acogida.",
+    "about.value1.title": "Calidad",
+    "about.value1.text": "Cocina cuidada, hecha al momento.",
+    "about.value2.title": "Tradición",
+    "about.value2.text": "Recetas portuguesas de siempre.",
+    "about.value3.title": "Familia",
+    "about.value3.text": "Una casa gestionada por un matrimonio.",
+
+    "menu.eyebrow": "Nuestra carta",
+    "menu.title": "Menú",
+    "menu.subtitle":
+      "Nuestra carta está disponible en portugués, inglés, español y francés. Pregunte por el plato del día en la mesa.",
+    "menu.priceSoon": "Precio en la carta",
+    "menu.note": "La carta puede variar según el mercado y la temporada.",
+
+    "gallery.eyebrow": "Galería",
+    "gallery.title": "El restaurante",
+    "gallery.subtitle": "Imágenes ilustrativas — las fotografías reales se añadirán próximamente.",
+    "gallery.interior": "Sala del restaurante",
+    "gallery.dish": "Plato de cocina portuguesa",
+    "gallery.square": "Centro histórico de Guimarães",
+    "gallery.facade": "Ambiente del restaurante",
+    "gallery.prev": "Imagen anterior",
+    "gallery.next": "Imagen siguiente",
+    "gallery.close": "Cerrar imagen",
+
+    "reviews.eyebrow": "Opiniones",
+    "reviews.title": "Lo que dicen nuestros clientes",
+    "reviews.placeholder": "Espacio reservado para una opinión real de cliente. Sustituir por un testimonio verdadero.",
+    "reviews.placeholderAuthor": "Opinión por completar",
+    "reviews.note": "Testimonios compartidos por nuestros clientes.",
+
+    "reservation.eyebrow": "Reservas",
+    "reservation.title": "Solicitud de reserva",
+    "reservation.subtitle":
+      "Aceptamos reservas según el periodo. Rellene los datos y enviaremos la solicitud por WhatsApp.",
+    "reservation.name": "Nombre",
+    "reservation.people": "Número de personas",
+    "reservation.date": "Fecha",
+    "reservation.time": "Hora",
+    "reservation.message": "Mensaje (opcional)",
+    "reservation.messagePlaceholder": "Alergias, trona, ocasión especial...",
+    "reservation.submit": "Enviar solicitud por WhatsApp",
+    "reservation.disclaimer":
+      "La reserva solo queda confirmada después de que el restaurante responda y confirme por WhatsApp.",
+    "reservation.required": "Por favor, rellene nombre, fecha y hora.",
+    "reservation.waIntro": "Hola, me gustaría hacer una reserva en el Restaurante Paraxut.",
+    "reservation.waName": "Nombre",
+    "reservation.waPeople": "Personas",
+    "reservation.waDate": "Fecha",
+    "reservation.waTime": "Hora",
+    "reservation.waMessage": "Mensaje",
+
+    "location.eyebrow": "Ubicación",
+    "location.title": "Dónde estamos",
+    "location.historic": "En el centro histórico de Guimarães, en la Praça de São Tiago.",
+    "location.mapTitle": "Mapa con la ubicación del Restaurante Paraxut",
+
+    "contact.eyebrow": "Contacto",
+    "contact.title": "Hable con nosotros",
+    "contact.phone": "Teléfono",
+    "contact.whatsapp": "WhatsApp",
+    "contact.email": "Email",
+    "contact.facebook": "Facebook",
+    "contact.facebookSoon": "Página próximamente",
+    "contact.hours": "Horario",
+    "contact.everyday": "Todos los días",
+    "contact.lunch": "Comida",
+    "contact.dinner": "Cena",
+
+    "footer.rights": "Todos los derechos reservados.",
+    "footer.links": "Navegación",
+    "footer.languages": "Idiomas",
+
+    "theme.toggle": "Cambiar modo claro/oscuro",
+    "lang.label": "Idioma",
+    "seo.title": "Restaurante Paraxut | Restaurante Portugués en Guimarães",
+    "seo.description":
+      "Restaurante Paraxut, desde 1992 en el centro histórico de Guimarães. Cocina tradicional portuguesa en la Praça de São Tiago. Reservas por WhatsApp.",
+  },
+
+  fr: {
+    "nav.home": "Accueil",
+    "nav.about": "À propos",
+    "nav.menu": "Carte",
+    "nav.gallery": "Galerie",
+    "nav.reviews": "Avis",
+    "nav.reservations": "Réservations",
+    "nav.location": "Situation",
+    "nav.contact": "Contact",
+    "nav.openMenu": "Ouvrir le menu de navigation",
+    "nav.closeMenu": "Fermer le menu de navigation",
+
+    "cta.whatsapp": "Réserver par WhatsApp",
+    "cta.viewMenu": "Voir la carte",
+    "cta.maps": "Ouvrir dans Google Maps",
+    "cta.email": "Email",
+    "cta.call": "Appeler",
+
+    "hero.since": "Depuis 1992",
+    "hero.house": "Maison portugaise",
+    "hero.tagline": "Saveurs traditionnelles portugaises au cœur de Guimarães",
+    "hero.imageAlt": "Table dressée avec des plats traditionnels portugais",
+
+    "tourist.title": "Cuisine traditionnelle portugaise à Guimarães",
+    "tourist.text":
+      "Dans le centre historique de Guimarães, à deux pas de la Praça de São Tiago, nous servons une cuisine portugaise depuis 1992.",
+    "tourist.location": "Centre historique",
+    "tourist.hours": "Déjeuner et dîner, tous les jours",
+    "tourist.cuisine": "Cuisine portugaise",
+    "tourist.booking": "Réservation par WhatsApp",
+
+    "about.eyebrow": "Notre histoire",
+    "about.title": "Une maison portugaise depuis 1992",
+    "about.p1":
+      "Le nom Paraxut vient de l'histoire du propriétaire : avant de consacrer sa vie au restaurant, il était parachutiste. De ce parcours sont restés la rigueur, la discipline et le goût du travail bien fait.",
+    "about.p2":
+      "Depuis 1992, la maison est tenue par un couple. C'est une cuisine de famille, faite chaque jour avec le même soin.",
+    "about.p3":
+      "Nos valeurs sont simples et n'ont pas changé : qualité et tradition, à table comme dans l'accueil.",
+    "about.value1.title": "Qualité",
+    "about.value1.text": "Une cuisine soignée, faite minute.",
+    "about.value2.title": "Tradition",
+    "about.value2.text": "Des recettes portugaises de toujours.",
+    "about.value3.title": "Famille",
+    "about.value3.text": "Une maison tenue par un couple.",
+
+    "menu.eyebrow": "Notre carte",
+    "menu.title": "Carte",
+    "menu.subtitle":
+      "Notre carte est disponible en portugais, anglais, espagnol et français. Demandez le plat du jour à table.",
+    "menu.priceSoon": "Prix sur la carte",
+    "menu.note": "La carte peut varier selon le marché et la saison.",
+
+    "gallery.eyebrow": "Galerie",
+    "gallery.title": "Le restaurant",
+    "gallery.subtitle": "Images d'illustration — les photographies réelles seront ajoutées prochainement.",
+    "gallery.interior": "Salle du restaurant",
+    "gallery.dish": "Plat de cuisine portugaise",
+    "gallery.square": "Centre historique de Guimarães",
+    "gallery.facade": "Ambiance du restaurant",
+    "gallery.prev": "Image précédente",
+    "gallery.next": "Image suivante",
+    "gallery.close": "Fermer l'image",
+
+    "reviews.eyebrow": "Avis",
+    "reviews.title": "Ce que disent nos clients",
+    "reviews.placeholder": "Emplacement réservé à un avis client réel. À remplacer par un témoignage authentique.",
+    "reviews.placeholderAuthor": "Avis à compléter",
+    "reviews.note": "Témoignages partagés par nos clients.",
+
+    "reservation.eyebrow": "Réservations",
+    "reservation.title": "Demande de réservation",
+    "reservation.subtitle":
+      "Nous acceptons les réservations selon la période. Remplissez vos informations et nous enverrons la demande par WhatsApp.",
+    "reservation.name": "Nom",
+    "reservation.people": "Nombre de personnes",
+    "reservation.date": "Date",
+    "reservation.time": "Heure",
+    "reservation.message": "Message (facultatif)",
+    "reservation.messagePlaceholder": "Allergies, chaise haute, occasion spéciale...",
+    "reservation.submit": "Envoyer la demande par WhatsApp",
+    "reservation.disclaimer":
+      "La réservation n'est confirmée qu'après la réponse et la confirmation du restaurant par WhatsApp.",
+    "reservation.required": "Veuillez indiquer le nom, la date et l'heure.",
+    "reservation.waIntro": "Bonjour, je souhaiterais réserver une table au Restaurante Paraxut.",
+    "reservation.waName": "Nom",
+    "reservation.waPeople": "Personnes",
+    "reservation.waDate": "Date",
+    "reservation.waTime": "Heure",
+    "reservation.waMessage": "Message",
+
+    "location.eyebrow": "Situation",
+    "location.title": "Où nous trouver",
+    "location.historic": "Dans le centre historique de Guimarães, sur la Praça de São Tiago.",
+    "location.mapTitle": "Carte indiquant l'emplacement du Restaurante Paraxut",
+
+    "contact.eyebrow": "Contact",
+    "contact.title": "Contactez-nous",
+    "contact.phone": "Téléphone",
+    "contact.whatsapp": "WhatsApp",
+    "contact.email": "Email",
+    "contact.facebook": "Facebook",
+    "contact.facebookSoon": "Page bientôt disponible",
+    "contact.hours": "Horaires",
+    "contact.everyday": "Tous les jours",
+    "contact.lunch": "Déjeuner",
+    "contact.dinner": "Dîner",
+
+    "footer.rights": "Tous droits réservés.",
+    "footer.links": "Navigation",
+    "footer.languages": "Langues",
+
+    "theme.toggle": "Basculer mode clair/sombre",
+    "lang.label": "Langue",
+    "seo.title": "Restaurante Paraxut | Restaurant Portugais à Guimarães",
+    "seo.description":
+      "Restaurante Paraxut, depuis 1992 dans le centre historique de Guimarães. Cuisine traditionnelle portugaise sur la Praça de São Tiago. Réservations par WhatsApp.",
+  },
+} as const;
+
+export type TranslationKey = keyof (typeof dictionaries)["pt"];
