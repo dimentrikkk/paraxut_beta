@@ -14,7 +14,7 @@ import { Contact } from "@/components/site/Contact";
 import { Footer } from "@/components/site/Footer";
 import { restaurant, fullAddress } from "@/config/restaurant";
 
-const title = "Paraxut | Sabores Tradicionais de Guimarães";
+const title = "Restaurante Paraxut | Restaurante Português em Guimarães";
 const description =
   "Restaurante Paraxut, desde 1992 no centro histórico de Guimarães. Cozinha tradicional portuguesa na Praça de São Tiago. Reservas por WhatsApp.";
 
