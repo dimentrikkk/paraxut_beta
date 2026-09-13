@@ -26,7 +26,7 @@ export const dictionaries = {
 
     "hero.since": "Desde 1992",
     "hero.house": "Casa portuguesa",
-    "hero.tagline": "Sabores tradicionais portugueses no coração de Guimarães",
+    "hero.tagline": "Sabores tradicionais portugueses no coração de Guima",
     "hero.imageAlt": "Mesa posta com pratos tradicionais portugueses",
 
     "tourist.title": "Cozinha tradicional portuguesa em Guimarães",
