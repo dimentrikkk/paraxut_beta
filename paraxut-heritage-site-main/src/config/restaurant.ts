@@ -5,7 +5,7 @@
  * Nenhum destes valores deve ser repetido dentro dos componentes.
  */
 
-import heroImage from "@/assets/hero-placeholder.jpg";
+import heroImage from "@/assets/hero-placeholder.png";
 import galleryInterior from "@/assets/gallery-interior.jpg";
 import galleryDish from "@/assets/gallery-dish.jpg";
 import gallerySquare from "@/assets/gallery-square.jpg";
