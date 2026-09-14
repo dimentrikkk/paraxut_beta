@@ -5,9 +5,16 @@ import { Reveal, SectionHeading } from "./Reveal";
 import galleryDish from "@/assets/gallery-dish.jpg";
 import galleryInterior from "@/assets/gallery-interior.jpg";
 import gallerySquare from "@/assets/gallery-square.jpg";
+import soupBoard from "@/assets/sopas/tabua.jpeg";
+import caldoVerde from "@/assets/sopas/caldoverde.jpeg";
+import cheeseBoard from "@/assets/entradas/tabuaqueijo.jpeg";
+import prawns from "@/assets/entradas/gambas.jpeg";
+import vegetableSoup from "@/assets/entradas/sopalegumes.jpeg";
+import mushrooms from "@/assets/entradas/cogumelos.jpeg";
+import peppers from "@/assets/entradas/pimentos.jpeg";
 
 const categoryImages = [
-  [galleryDish, galleryInterior, gallerySquare],
+  [soupBoard, caldoVerde, cheeseBoard, prawns, vegetableSoup, mushrooms, peppers],
   [galleryInterior, galleryDish, gallerySquare],
   [gallerySquare, galleryDish, galleryInterior],
 ];

@@ -9,13 +9,6 @@ import heroImage from "@/assets/hero-placeholder.png";
 import galleryInterior from "@/assets/gallery-interior.jpg";
 import galleryDish from "@/assets/gallery-dish.jpg";
 import gallerySquare from "@/assets/gallery-square.jpg";
-import soupBoard from "@/assets/sopas/tabua.jpeg";
-import caldoVerde from "@/assets/sopas/caldoverde.jpeg";
-import cheeseBoard from "@/assets/entradas/tabuaqueijo.jpeg";
-import prawns from "@/assets/entradas/gambas.jpeg";
-import vegetableSoup from "@/assets/entradas/sopalegumes.jpeg";
-import mushrooms from "@/assets/entradas/cogumelos.jpeg";
-import peppers from "@/assets/entradas/pimentos.jpeg";
 
 export const restaurant = {
   name: "Restaurante Paraxut",
@@ -65,18 +58,7 @@ export const restaurant = {
 export type GalleryImage = {
   src: string;
   /** chave de tradução do alt/legenda */
-  captionKey:
-    | "gallery.interior"
-    | "gallery.dish"
-    | "gallery.square"
-    | "gallery.facade"
-    | "gallery.soupBoard"
-    | "gallery.caldoVerde"
-    | "gallery.cheeseBoard"
-    | "gallery.prawns"
-    | "gallery.vegetableSoup"
-    | "gallery.mushrooms"
-    | "gallery.peppers";
+  captionKey: "gallery.interior" | "gallery.dish" | "gallery.square" | "gallery.facade";
 };
 
 /** GALERIA — substituir por fotografias reais do restaurante */
@@ -85,13 +67,6 @@ export const galleryImages: GalleryImage[] = [
   { src: galleryDish, captionKey: "gallery.dish" },
   { src: gallerySquare, captionKey: "gallery.square" },
   { src: heroImage, captionKey: "gallery.facade" },
-  { src: soupBoard, captionKey: "gallery.soupBoard" },
-  { src: caldoVerde, captionKey: "gallery.caldoVerde" },
-  { src: cheeseBoard, captionKey: "gallery.cheeseBoard" },
-  { src: prawns, captionKey: "gallery.prawns" },
-  { src: vegetableSoup, captionKey: "gallery.vegetableSoup" },
-  { src: mushrooms, captionKey: "gallery.mushrooms" },
-  { src: peppers, captionKey: "gallery.peppers" },
 ];
 
 export const fullAddress = `${restaurant.address.street}, ${restaurant.address.postalCode} ${restaurant.address.city}, ${restaurant.address.country}`;
