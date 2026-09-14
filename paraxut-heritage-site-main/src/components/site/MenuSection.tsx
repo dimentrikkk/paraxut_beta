@@ -1,4 +1,5 @@
-import { Camera } from "lucide-react";
+import { Camera, ChevronLeft, ChevronRight } from "lucide-react";
+import { useState } from "react";
 import { menu } from "@/data/menu";
 import { useI18n } from "@/lib/i18n";
 import { Reveal, SectionHeading } from "./Reveal";
@@ -28,6 +29,12 @@ function formatPrice(price: number, locale: string) {
 
 export function MenuSection() {
   const { t, locale } = useI18n();
+  const [photoStart, setPhotoStart] = useState(0);
+
+  const soupAndStarterImages = categoryImages[0];
+  const visibleSoupAndStarterImages = [0, 1, 2].map(
+    (offset) => soupAndStarterImages[(photoStart + offset) % soupAndStarterImages.length],
+  );
 
   return (
     <section id="menu" className="scroll-mt-20 bg-secondary py-16 sm:py-24">
@@ -82,17 +89,56 @@ export function MenuSection() {
                   </div>
                 </div>
                 <div className="border-t border-border bg-muted p-4 sm:p-5">
-                  <div className="grid grid-cols-3 gap-3">
-                    {categoryImages[i % categoryImages.length].map((image, imageIndex) => (
-                      <img
-                        key={`${category.id}-${imageIndex}`}
-                        src={image}
-                        alt={`${category.title[locale]} ${imageIndex + 1}`}
-                        loading="lazy"
-                        className="aspect-[16/9] w-full rounded-sm object-cover"
-                      />
-                    ))}
-                  </div>
+                  {i === 0 ? (
+                    <div className="flex items-center gap-2 sm:gap-3">
+                      <button
+                        type="button"
+                        onClick={() =>
+                          setPhotoStart(
+                            (current) =>
+                              (current - 1 + soupAndStarterImages.length) % soupAndStarterImages.length,
+                          )
+                        }
+                        aria-label={t("gallery.prev")}
+                        className="inline-flex h-10 w-10 shrink-0 items-center justify-center rounded-sm border border-border text-foreground transition-colors hover:bg-background focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring"
+                      >
+                        <ChevronLeft className="h-5 w-5" />
+                      </button>
+                      <div className="grid min-w-0 flex-1 grid-cols-3 gap-3">
+                        {visibleSoupAndStarterImages.map((image, imageIndex) => (
+                          <img
+                            key={`${category.id}-${photoStart}-${imageIndex}`}
+                            src={image}
+                            alt={`${category.title[locale]} ${photoStart + imageIndex + 1}`}
+                            loading="lazy"
+                            className="aspect-[16/9] w-full rounded-sm object-cover"
+                          />
+                        ))}
+                      </div>
+                      <button
+                        type="button"
+                        onClick={() =>
+                          setPhotoStart((current) => (current + 1) % soupAndStarterImages.length)
+                        }
+                        aria-label={t("gallery.next")}
+                        className="inline-flex h-10 w-10 shrink-0 items-center justify-center rounded-sm border border-border text-foreground transition-colors hover:bg-background focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring"
+                      >
+                        <ChevronRight className="h-5 w-5" />
+                      </button>
+                    </div>
+                  ) : (
+                    <div className="grid grid-cols-3 gap-3">
+                      {categoryImages[i % categoryImages.length].map((image, imageIndex) => (
+                        <img
+                          key={`${category.id}-${imageIndex}`}
+                          src={image}
+                          alt={`${category.title[locale]} ${imageIndex + 1}`}
+                          loading="lazy"
+                          className="aspect-[16/9] w-full rounded-sm object-cover"
+                        />
+                      ))}
+                    </div>
+                  )}
                   <div className="mt-4 flex items-center justify-center gap-2 text-center">
                     <Camera className="h-5 w-5 text-gold" aria-hidden="true" />
                     <p className="font-display text-xl text-foreground">{category.title[locale]}</p>
