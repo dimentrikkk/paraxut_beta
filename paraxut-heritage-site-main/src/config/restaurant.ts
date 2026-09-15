@@ -13,6 +13,7 @@ import galleryImage4 from "@/assets/galeria/imagem4.jpeg";
 import galleryImage5 from "@/assets/galeria/imagem5.jpeg";
 import galleryImage6 from "@/assets/galeria/imagem6.jpeg";
 import galleryImage7 from "@/assets/galeria/imagem7.jpeg";
+import galleryImage8 from "@/assets/galeria/imagem8.jpg";
 
 export const restaurant = {
   name: "Restaurante Paraxut",
@@ -69,7 +70,8 @@ export type GalleryImage = {
     | "gallery.photo4"
     | "gallery.photo5"
     | "gallery.photo6"
-    | "gallery.photo7";
+    | "gallery.photo7"
+    | "gallery.photo8";
 };
 
 /** GALERIA — substituir por fotografias reais do restaurante */
@@ -81,6 +83,7 @@ export const galleryImages: GalleryImage[] = [
   { src: galleryImage5, captionKey: "gallery.photo5" },
   { src: galleryImage6, captionKey: "gallery.photo6" },
   { src: galleryImage7, captionKey: "gallery.photo7" },
+  { src: galleryImage8, captionKey: "gallery.photo8" },
 ];
 
 export const fullAddress = `${restaurant.address.street}, ${restaurant.address.postalCode} ${restaurant.address.city}, ${restaurant.address.country}`;

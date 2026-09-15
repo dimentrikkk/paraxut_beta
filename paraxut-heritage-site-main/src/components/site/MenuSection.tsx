@@ -3,9 +3,6 @@ import { useState } from "react";
 import { menu } from "@/data/menu";
 import { useI18n } from "@/lib/i18n";
 import { Reveal, SectionHeading } from "./Reveal";
-import galleryDish from "@/assets/gallery-dish.jpg";
-import galleryInterior from "@/assets/gallery-interior.jpg";
-import gallerySquare from "@/assets/gallery-square.jpg";
 import soupBoard from "@/assets/sopas/tabua.jpeg";
 import caldoVerde from "@/assets/sopas/caldoverde.jpeg";
 import cheeseBoard from "@/assets/entradas/tabuaqueijo.jpeg";
@@ -13,11 +10,51 @@ import prawns from "@/assets/entradas/gambas.jpeg";
 import vegetableSoup from "@/assets/entradas/sopalegumes.jpeg";
 import mushrooms from "@/assets/entradas/cogumelos.jpeg";
 import peppers from "@/assets/entradas/pimentos.jpeg";
+import beefPepper from "@/assets/carnes/bife 5 pimentas.jpg";
+import naco from "@/assets/carnes/naco.jpg";
+import pernil from "@/assets/carnes/pernil.jpg";
+import picanha from "@/assets/carnes/picanha.jpg";
+import secretos from "@/assets/carnes/secretos.jpg";
+import codCornbread from "@/assets/peixes/bacalhaubroa.jpg";
+import codCream from "@/assets/peixes/bacalhaunatas.jpg";
+import seaBass from "@/assets/peixes/filetesrobalo.jpg";
+import octopus from "@/assets/peixes/polvo.jpg";
+import salmon from "@/assets/peixes/salmao.jpg";
+import sardines from "@/assets/peixes/sardinha.jpg";
+import prawnTagliatelle from "@/assets/peixes/tagliatelegambas.jpg";
+import tunaSalad from "@/assets/saladas/saladaatum.jpg";
+import chickenSalad from "@/assets/saladas/saladafrango.jpg";
+import vegetarianBolognese from "@/assets/vegetariano/bolonhesavegetariana.webp";
 
 const categoryImages = [
-  [soupBoard, caldoVerde, cheeseBoard, prawns, vegetableSoup, mushrooms, peppers],
-  [galleryInterior, galleryDish, gallerySquare],
-  [gallerySquare, galleryDish, galleryInterior],
+  [
+    { src: soupBoard, name: "Tábua de sopas" },
+    { src: caldoVerde, name: "Caldo Verde" },
+    { src: cheeseBoard, name: "Tábua de queijo e presunto" },
+    { src: prawns, name: "Gambas à guilho" },
+    { src: vegetableSoup, name: "Sopa de legumes" },
+    { src: mushrooms, name: "Cogumelos crocantes" },
+    { src: peppers, name: "Pimentos Padrão" },
+  ],
+  [
+    { src: tunaSalad, name: "Salada de atum" },
+    { src: chickenSalad, name: "Salada de frango" },
+    { src: vegetarianBolognese, name: "Bolonhesa vegetariana" },
+  ],
+  [
+    { src: codCornbread, name: "Bacalhau com broa" },
+    { src: codCream, name: "Bacalhau com natas" },
+    { src: seaBass, name: "Filetes de robalo" },
+    { src: octopus, name: "Polvo à lagareiro" },
+    { src: salmon, name: "Salmão" },
+    { src: sardines, name: "Sardinhas assadas" },
+    { src: prawnTagliatelle, name: "Tagliatelle de gambas" },
+    { src: beefPepper, name: "Bife 5 pimentas" },
+    { src: naco, name: "Naco à conquistador" },
+    { src: pernil, name: "Pernil" },
+    { src: picanha, name: "Picanha" },
+    { src: secretos, name: "Secretos de porco preto" },
+  ],
 ];
 
 function formatPrice(price: number, locale: string) {
@@ -106,13 +143,17 @@ export function MenuSection() {
                       </button>
                       <div className="grid min-w-0 flex-1 grid-cols-3 gap-3">
                         {visibleSoupAndStarterImages.map((image, imageIndex) => (
-                          <img
-                            key={`${category.id}-${photoStart}-${imageIndex}`}
-                            src={image}
-                            alt={`${category.title[locale]} ${photoStart + imageIndex + 1}`}
-                            loading="lazy"
-                            className="aspect-[16/9] w-full rounded-sm object-cover"
-                          />
+                          <div key={`${category.id}-${photoStart}-${imageIndex}`} className="group relative overflow-hidden rounded-sm">
+                            <img
+                              src={image.src}
+                              alt={image.name}
+                              loading="lazy"
+                              className="aspect-[16/9] w-full object-cover"
+                            />
+                            <span className="absolute inset-x-0 bottom-0 bg-gradient-to-t from-black/75 to-transparent px-2 pb-2 pt-6 text-xs font-semibold text-white opacity-0 transition-opacity group-hover:opacity-100 group-focus-within:opacity-100">
+                              {image.name}
+                            </span>
+                          </div>
                         ))}
                       </div>
                       <button
@@ -129,13 +170,17 @@ export function MenuSection() {
                   ) : (
                     <div className="grid grid-cols-3 gap-3">
                       {categoryImages[i % categoryImages.length].map((image, imageIndex) => (
-                        <img
-                          key={`${category.id}-${imageIndex}`}
-                          src={image}
-                          alt={`${category.title[locale]} ${imageIndex + 1}`}
-                          loading="lazy"
-                          className="aspect-[16/9] w-full rounded-sm object-cover"
-                        />
+                        <div key={`${category.id}-${imageIndex}`} className="group relative overflow-hidden rounded-sm">
+                          <img
+                            src={image.src}
+                            alt={image.name}
+                            loading="lazy"
+                            className="aspect-[16/9] w-full object-cover"
+                          />
+                          <span className="absolute inset-x-0 bottom-0 bg-gradient-to-t from-black/75 to-transparent px-2 pb-2 pt-6 text-xs font-semibold text-white opacity-0 transition-opacity group-hover:opacity-100">
+                            {image.name}
+                          </span>
+                        </div>
                       ))}
                     </div>
                   )}
