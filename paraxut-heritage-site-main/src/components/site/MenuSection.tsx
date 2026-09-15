@@ -10,13 +10,13 @@ import prawns from "@/assets/entradas/gambas.jpeg";
 import vegetableSoup from "@/assets/entradas/sopalegumes.jpeg";
 import mushrooms from "@/assets/entradas/cogumelos.jpeg";
 import peppers from "@/assets/entradas/pimentos.jpeg";
-import beefPepper from "@/assets/carnes/bife 5 pimentas.jpg";
-import naco from "@/assets/carnes/naco.jpg";
-import pernil from "@/assets/carnes/pernil.jpg";
+import beefPepper from "@/assets/carnes/bife 5 pimentas.png";
+import naco from "@/assets/carnes/naco.jpeg";
+import pernil from "@/assets/carnes/pernil.jpeg";
 import picanha from "@/assets/carnes/picanha.jpg";
-import secretos from "@/assets/carnes/secretos.jpg";
-import codCornbread from "@/assets/peixes/bacalhaubroa.jpg";
-import codCream from "@/assets/peixes/bacalhaunatas.jpg";
+import secretos from "@/assets/carnes/secretos.jpeg";
+import codCornbread from "@/assets/peixes/bacalhaubroa.jpeg";
+import codCream from "@/assets/peixes/bacalhaunatas.jpeg";
 import seaBass from "@/assets/peixes/filetesrobalo.jpg";
 import octopus from "@/assets/peixes/polvo.jpg";
 import salmon from "@/assets/peixes/salmao.jpg";
@@ -24,7 +24,8 @@ import sardines from "@/assets/peixes/sardinha.jpg";
 import prawnTagliatelle from "@/assets/peixes/tagliatelegambas.jpg";
 import tunaSalad from "@/assets/saladas/saladaatum.jpg";
 import chickenSalad from "@/assets/saladas/saladafrango.jpg";
-import vegetarianBolognese from "@/assets/vegetariano/bolonhesavegetariana.webp";
+import smokedSalmonSalad from "@/assets/saladas/saladasalmao.png";
+import vegetarianBolognese from "@/assets/vegetariano/bolonhesavegetariana.png";
 
 const categoryImages = [
   [
@@ -39,6 +40,7 @@ const categoryImages = [
   [
     { src: tunaSalad, name: "Salada de atum" },
     { src: chickenSalad, name: "Salada de frango" },
+    { src: smokedSalmonSalad, name: "Salada de salmão fumado" },
     { src: vegetarianBolognese, name: "Bolonhesa vegetariana" },
   ],
   [
