@@ -61,9 +61,6 @@ export function Gallery() {
                   loading="lazy"
                   className="aspect-4/3 w-full object-cover transition-transform duration-500 group-hover:scale-105"
                 />
-                <span className="absolute inset-x-0 bottom-0 bg-gradient-to-t from-black/70 to-transparent px-3 py-2 text-left text-xs text-[oklch(0.97_0.01_85)] opacity-0 transition-opacity duration-300 group-hover:opacity-100 group-focus-visible:opacity-100">
-                  {t(image.captionKey)}
-                </span>
               </button>
             </Reveal>
           ))}
@@ -103,9 +100,6 @@ export function Gallery() {
               alt={t(active.captionKey)}
               className="max-h-[75svh] w-auto rounded-sm object-contain"
             />
-            <figcaption className="mt-3 text-center text-sm text-[oklch(0.9_0.01_85)]">
-              {t(active.captionKey)}
-            </figcaption>
           </figure>
           <button
             type="button"
