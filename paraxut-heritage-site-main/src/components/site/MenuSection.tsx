@@ -1,5 +1,5 @@
-import { Camera, ChevronLeft, ChevronRight } from "lucide-react";
-import { useState } from "react";
+import { Camera, ChevronLeft, ChevronRight, X } from "lucide-react";
+import { useEffect, useState } from "react";
 import { menu } from "@/data/menu";
 import { useI18n } from "@/lib/i18n";
 import { Reveal, SectionHeading } from "./Reveal";
@@ -67,6 +67,7 @@ function formatPrice(price: number, locale: string) {
 export function MenuSection() {
   const { t, locale } = useI18n();
   const [photoStarts, setPhotoStarts] = useState<Record<number, number>>({});
+  const [selectedPhoto, setSelectedPhoto] = useState<{ categoryIndex: number; imageIndex: number } | null>(null);
 
   const getVisibleImages = (categoryIndex: number) => {
     const images = categoryImages[categoryIndex];
@@ -82,6 +83,36 @@ export function MenuSection() {
       [categoryIndex]: ((current[categoryIndex] ?? 0) + direction + imageCount) % imageCount,
     }));
   };
+
+  const moveSelectedPhoto = (direction: number) => {
+    setSelectedPhoto((current) => {
+      if (!current) return current;
+      const images = categoryImages[current.categoryIndex];
+      return {
+        ...current,
+        imageIndex: (current.imageIndex + direction + images.length) % images.length,
+      };
+    });
+  };
+
+  useEffect(() => {
+    if (!selectedPhoto) return;
+    const onKey = (event: KeyboardEvent) => {
+      if (event.key === "Escape") setSelectedPhoto(null);
+      if (event.key === "ArrowLeft") moveSelectedPhoto(-1);
+      if (event.key === "ArrowRight") moveSelectedPhoto(1);
+    };
+    window.addEventListener("keydown", onKey);
+    document.body.style.overflow = "hidden";
+    return () => {
+      window.removeEventListener("keydown", onKey);
+      document.body.style.overflow = "";
+    };
+  }, [selectedPhoto]);
+
+  const activePhoto = selectedPhoto
+    ? categoryImages[selectedPhoto.categoryIndex][selectedPhoto.imageIndex]
+    : null;
 
   return (
     <section id="menu" className="scroll-mt-20 bg-secondary py-16 sm:py-24">
@@ -147,7 +178,16 @@ export function MenuSection() {
                       </button>
                     <div className="grid min-w-0 flex-1 grid-cols-3 gap-3">
                       {getVisibleImages(i).map((image, imageIndex) => (
-                          <div key={`${category.id}-${photoStarts[i] ?? 0}-${imageIndex}`} className="group relative overflow-hidden rounded-sm">
+                          <button
+                            type="button"
+                            onClick={() =>
+                              setSelectedPhoto({
+                                categoryIndex: i,
+                                imageIndex: ((photoStarts[i] ?? 0) + imageIndex) % categoryImages[i].length,
+                              })
+                            }
+                            className="group relative block w-full overflow-hidden rounded-sm focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring"
+                          >
                             <img
                               src={image.src}
                               alt={image.name}
@@ -157,7 +197,7 @@ export function MenuSection() {
                             <span className="absolute inset-x-0 bottom-0 bg-gradient-to-t from-black/75 to-transparent px-2 pb-2 pt-6 text-xs font-semibold text-white opacity-0 transition-opacity group-hover:opacity-100 group-focus-within:opacity-100">
                               {image.name}
                             </span>
-                          </div>
+                          </button>
                         ))}
                     </div>
                     <button
@@ -181,6 +221,51 @@ export function MenuSection() {
 
         <p className="mt-10 text-center text-xs text-muted-foreground">{t("menu.note")}</p>
       </div>
+
+      {activePhoto && selectedPhoto ? (
+        <div
+          role="dialog"
+          aria-modal="true"
+          aria-label={activePhoto.name}
+          className="fixed inset-0 z-100 flex items-center justify-center bg-black/90 p-4"
+          onClick={() => setSelectedPhoto(null)}
+        >
+          <button
+            type="button"
+            onClick={() => setSelectedPhoto(null)}
+            aria-label={t("gallery.close")}
+            className="absolute right-4 top-4 inline-flex h-11 w-11 items-center justify-center rounded-sm text-white hover:bg-white/10"
+          >
+            <X className="h-6 w-6" />
+          </button>
+          <button
+            type="button"
+            onClick={(event) => {
+              event.stopPropagation();
+              moveSelectedPhoto(-1);
+            }}
+            aria-label={t("gallery.prev")}
+            className="absolute left-2 inline-flex h-11 w-11 items-center justify-center rounded-sm text-white hover:bg-white/10 sm:left-6"
+          >
+            <ChevronLeft className="h-7 w-7" />
+          </button>
+          <figure onClick={(event) => event.stopPropagation()} className="max-h-full text-center">
+            <img src={activePhoto.src} alt={activePhoto.name} className="max-h-[75svh] w-auto rounded-sm object-contain" />
+            <figcaption className="mt-3 text-sm text-white">{activePhoto.name}</figcaption>
+          </figure>
+          <button
+            type="button"
+            onClick={(event) => {
+              event.stopPropagation();
+              moveSelectedPhoto(1);
+            }}
+            aria-label={t("gallery.next")}
+            className="absolute right-2 inline-flex h-11 w-11 items-center justify-center rounded-sm text-white hover:bg-white/10 sm:right-6"
+          >
+            <ChevronRight className="h-7 w-7" />
+          </button>
+        </div>
+      ) : null}
     </section>
   );
 }
