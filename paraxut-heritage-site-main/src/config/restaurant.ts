@@ -6,9 +6,13 @@
  */
 
 import heroImage from "@/assets/hero-placeholder.png";
-import galleryInterior from "@/assets/gallery-interior.jpg";
-import galleryDish from "@/assets/gallery-dish.jpg";
-import gallerySquare from "@/assets/gallery-square.jpg";
+import galleryImage1 from "@/assets/galeria/imagem1.jpeg";
+import galleryImage2 from "@/assets/galeria/imagem2.jpeg";
+import galleryImage3 from "@/assets/galeria/imagem3.jpeg";
+import galleryImage4 from "@/assets/galeria/imagem4.jpeg";
+import galleryImage5 from "@/assets/galeria/imagem5.jpeg";
+import galleryImage6 from "@/assets/galeria/imagem6.jpeg";
+import galleryImage7 from "@/assets/galeria/imagem7.jpeg";
 
 export const restaurant = {
   name: "Restaurante Paraxut",
@@ -58,15 +62,25 @@ export const restaurant = {
 export type GalleryImage = {
   src: string;
   /** chave de tradução do alt/legenda */
-  captionKey: "gallery.interior" | "gallery.dish" | "gallery.square" | "gallery.facade";
+  captionKey:
+    | "gallery.photo1"
+    | "gallery.photo2"
+    | "gallery.photo3"
+    | "gallery.photo4"
+    | "gallery.photo5"
+    | "gallery.photo6"
+    | "gallery.photo7";
 };
 
 /** GALERIA — substituir por fotografias reais do restaurante */
 export const galleryImages: GalleryImage[] = [
-  { src: galleryInterior, captionKey: "gallery.interior" },
-  { src: galleryDish, captionKey: "gallery.dish" },
-  { src: gallerySquare, captionKey: "gallery.square" },
-  { src: heroImage, captionKey: "gallery.facade" },
+  { src: galleryImage1, captionKey: "gallery.photo1" },
+  { src: galleryImage2, captionKey: "gallery.photo2" },
+  { src: galleryImage3, captionKey: "gallery.photo3" },
+  { src: galleryImage4, captionKey: "gallery.photo4" },
+  { src: galleryImage5, captionKey: "gallery.photo5" },
+  { src: galleryImage6, captionKey: "gallery.photo6" },
+  { src: galleryImage7, captionKey: "gallery.photo7" },
 ];
 
 export const fullAddress = `${restaurant.address.street}, ${restaurant.address.postalCode} ${restaurant.address.city}, ${restaurant.address.country}`;
