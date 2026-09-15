@@ -28,7 +28,7 @@ import vegetarianBolognese from "@/assets/vegetariano/bolonhesavegetariana.webp"
 
 const categoryImages = [
   [
-    { src: soupBoard, name: "Tábua de sopas" },
+    { src: soupBoard, name: "Tábua de salgadinhos" },
     { src: caldoVerde, name: "Caldo Verde" },
     { src: cheeseBoard, name: "Tábua de queijo e presunto" },
     { src: prawns, name: "Gambas à guilho" },
